@@ -1,3 +1,5 @@
+# udacityから落としてきたコードなので、今回は既存のgitignoreをそのまま使用
+
 .gradle
 .DS_Store
 

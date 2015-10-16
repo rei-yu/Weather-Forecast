@@ -56,6 +56,8 @@ public class MainActivity extends ActionBarActivity {
      */
     public static class PlaceholderFragment extends Fragment {
 
+        private ArrayAdapter<String> mForecastAdapter;
+
         public PlaceholderFragment() {
         }
 
@@ -78,7 +80,7 @@ public class MainActivity extends ActionBarActivity {
                     Arrays.asList(forecastArray));
 
             //ArrayAdapter will take data from a source
-            ArrayAdapter<String> forecastAdapter =
+            mForecastAdapter =
                     new ArrayAdapter<String>(
                             // the current context
                             getActivity(),
@@ -92,7 +94,7 @@ public class MainActivity extends ActionBarActivity {
 
             ListView listView = (ListView) rootView.findViewById(
                     R.id.listview_forecast);
-            listView.setAdapter(forecastAdapter);
+            listView.setAdapter(mForecastAdapter);
 
             return rootView;
         }
